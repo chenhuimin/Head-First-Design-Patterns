@@ -1,6 +1,5 @@
-package headfirst.observer.weather;
+package headfirst.observer.weatherstation;
 
-import java.util.*;
 
 public class ForecastDisplay implements Observer, DisplayElement {
 	private float currentPressure = 29.92f;  
@@ -12,6 +11,7 @@ public class ForecastDisplay implements Observer, DisplayElement {
 		weatherData.registerObserver(this);
 	}
 
+	@Override
 	public void update(float temp, float humidity, float pressure) {
                 lastPressure = currentPressure;
 		currentPressure = pressure;
@@ -19,6 +19,7 @@ public class ForecastDisplay implements Observer, DisplayElement {
 		display();
 	}
 
+	@Override
 	public void display() {
 		System.out.print("Forecast: ");
 		if (currentPressure > lastPressure) {

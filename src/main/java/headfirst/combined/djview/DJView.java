@@ -1,8 +1,9 @@
 package headfirst.combined.djview;
-    
-import java.awt.*;
-import java.awt.event.*;
+
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class DJView implements ActionListener,  BeatObserver, BPMObserver {
 	BeatModelInterface model;
@@ -31,7 +32,7 @@ public class DJView implements ActionListener,  BeatObserver, BPMObserver {
     }
     
     public void createView() {
-		// Create all Swing components here
+		// Create all swing components here
         viewPanel = new JPanel(new GridLayout(1, 2));
         viewFrame = new JFrame("View");
         viewFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -50,7 +51,7 @@ public class DJView implements ActionListener,  BeatObserver, BPMObserver {
   
   
     public void createControls() {
-		// Create all Swing components here
+		// Create all swing components here
         JFrame.setDefaultLookAndFeelDecorated(true);
         controlFrame = new JFrame("Control");
         controlFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

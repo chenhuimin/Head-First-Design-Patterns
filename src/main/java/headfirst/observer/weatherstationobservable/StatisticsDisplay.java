@@ -1,4 +1,4 @@
-package headfirst.observer.weatherobservable;
+package headfirst.observer.weatherstationobservable;
 
 import java.util.Observable;
 import java.util.Observer;
@@ -13,6 +13,7 @@ public class StatisticsDisplay implements Observer, DisplayElement {
 		observable.addObserver(this);
 	}
 
+	@Override
 	public void update(Observable observable, Object arg) {
 		if (observable instanceof WeatherData) {
 			WeatherData weatherData = (WeatherData)observable;
